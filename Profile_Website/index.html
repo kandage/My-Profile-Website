@@ -506,11 +506,13 @@
             grid-template-rows: repeat(4, 1fr);
             grid-template-columns: repeat(2, 1fr);
         }
+
         .proimg {
             background: url(assests/topcontact.jpg);
             background-size: cover;
             background-position: center;
         }
+
         body > section:nth-child(7) {
             left: 0;
             right: 0;
@@ -586,6 +588,7 @@
             left: 168px;
             top: 372px;
             background: #ff253a;
+            text-align: center;
         }
 
         footer {
@@ -602,6 +605,185 @@
 
         footer > div > h3 {
             color: green;
+        }
+
+        @media all and (max-width: 320px) {
+            .animation {
+                width: 400%;
+                height: 100%;
+                display: inline-flex;
+                position: absolute;
+                animation: slider 20000s infinite alternate;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+            .profile_details {
+                margin-left: 50px;
+                width: 787px;
+                margin-right: 500px;
+            }
+            .skillsbegin {
+                width: 500px;
+                height: 500px;
+                left: 356px;
+                /* right: 149px; */
+                margin: auto;
+                position: absolute;
+                display: grid;
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .skillsend {
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 99%;
+                height: 100px;
+                display: none;
+                grid-template-rows: repeat(1, 1fr);
+                grid-template-columns: repeat(18, 1fr);
+            }
+            .educationtop {
+                height: 100%;
+                width: 1259px;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                position: absolute;
+                opacity: 0.5;
+                background: url(assests/education.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .vl {
+                border-left: 6px solid green;
+                height: 650px;
+                width: 2px;
+                position: relative;
+                left: 300px;
+                right: 0;
+                margin: auto;
+                top: 0;
+            }
+            .dot1 {
+                background: #ff253a;
+                content: " ";
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                left: 447px;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                margin: auto;
+                border-radius: 100%;
+            }
+            .dot2 {
+                background: #ff253a;
+                content: " ";
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                left: 447px;
+                right: 0;
+                top: 100px;
+                margin: auto;
+                border-radius: 100%;
+            }
+            .dot3 {
+                background: #ff253a;
+                content: " ";
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                left: 447px;
+                right: 0;
+                bottom: 100px;
+                margin: auto;
+                border-radius: 100%;
+            }
+            .bubble1 {
+                width: 300px;
+                height: 80px;
+                border: 2px solid black;
+                position: relative;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                left: 512px;
+                right: 0;
+                bottom: 0;
+                top: -133px;
+                margin: auto;
+            }
+            .bubble2 {
+                width: 300px;
+                height: 80px;
+                background: red;
+                position: relative;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                left: 69px;
+                right: 0;
+                bottom: 0;
+                top: -474px;
+                margin: auto;
+            }
+            .bubble3 {
+                width: 300px;
+                height: 80px;
+                border: 2px solid black;
+                position: relative;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                left: 510px;
+                right: 0;
+                bottom: 0;
+                top: -794px;
+                margin: auto;
+            }
+            .assignments {
+                width: 500px;
+                height: 500px;
+                position: absolute;
+                left: 256px;
+                margin: auto;
+                display: grid;
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .project {
+                width: 500px;
+                position: absolute;
+                height: 500px;
+                left: 256px;
+                margin: auto;
+                display: grid;
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+            }
+            input[type=email], select {
+                width: 100px;
+                padding: 12px 20px;
+                display: inline-block;
+                box-sizing: border-box;
+                position: absolute;
+                top: 80px;
+                left: 858px;
+                right: 449px;
+            }
+            footer {
+                background: black;
+                height: 150px;
+                width: 393%;
+                position: absolute;
+                /* left: 0; */
+                /* right: 0; */
+            }
         }
     </style>
 </head>
@@ -691,8 +873,9 @@
     <div class="contact" id="contactn">
         <img src="assests/phone.png" alt="Testing">
         <h1>0716362422</h1></div>
-    <img src="assests/gmail.png" alt="Testing">hirunikandage@gmail.com
     <img src="assests/location.png" alt="Testing">Hiruni Kandage<br>Minuwandeniya<br>Karagoda<br>Galle.
+    <img src="assests/gmail.png" alt="Testing">hirunikandage@gmail.com
+
 </section>
 <section class="section3" id="section3">
     <h3><dfn id="SKILLS">Skills</dfn></h3>
@@ -811,7 +994,7 @@
     <img src="assests/sendme.gif" alt="This is a GIF Image" width="300px">
     <h3>hay there happy to here from you</h3>
     <div class="contacttop" id="contacttop"></div>
-    <div class="submit" id="submit"></div>
+    <div class="submit" id="submit">SEND</div>
     <aside class="text_side">
         <h1>Message me</h1>
         <input type="text" name="name"
@@ -822,7 +1005,6 @@
                placeholder="Subject">
         <input type="textarea" name="message"
                placeholder="Message..">
-        <div class="button">Send Message</div>
     </aside>
 </section>
 <footer>
