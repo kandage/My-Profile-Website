@@ -88,11 +88,23 @@
             overflow: hidden;
         }
 
+        .top {
+            height: 200px;
+            width: 200px;
+            margin-left: 900px;
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            background: url("assests/profilepic2.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
         .animation {
             width: 400%;
             height: 100%;
             display: flex;
-            animation: slider 10s infinite alternate;
+            animation: slider 20s infinite alternate;
         }
 
         .animation1 {
@@ -160,6 +172,7 @@
             margin-left: 50px;
             margin-top: 0;
             top: 100px;
+            text-align: center;
         }
 
         .profile_img {
@@ -169,7 +182,7 @@
             border-radius: 100%;
             position: absolute;
             left: 0;
-            background: url("assests/img1.jpg");
+            background: url("assests/profilepic2.jpg");
             background-size: cover;
             background-position: center;
         }
@@ -200,46 +213,27 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
-        #second1 {
+        h4 {
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
             background: #C4C4C4;
+            border-radius: 20px;
+            height: 8px;
+            width: 100%;
+        }
+
+        .progress {
+            background: #2E9CCA;
             border-radius: 20px;
             height: 8px;
             width: 20px;
         }
 
-        #second2 {
-            background: #C4C4C4;
-            border-radius: 20px;
-            height: 8px;
-            width: 20px;
-        }
-
-        #second3 {
-            background: #C4C4C4;
-            border-radius: 20px;
-            height: 8px;
-            width: 20px;
-        }
-
-        #second4 {
-            background: #C4C4C4;
-            border-radius: 20px;
-            height: 8px;
-            width: 20px;
-        }
-
-        #second5 {
-            background: #C4C4C4;
-            border-radius: 20px;
-            height: 8px;
-            width: 20px;
-        }
-
-        #second6 {
-            background: #C4C4C4;
-            border-radius: 20px;
-            height: 8px;
-            width: 20px;
+        .skillsbegin > div {
+            border: 20px solid white;
         }
 
         .skillsend {
@@ -452,20 +446,24 @@
             background-position: center;
         }
 
+        .educationtop {
+            height: 100%;
+            width: 1300px;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            opacity: 0.5;
+            background: url(assests/education.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
         hr {
             width: 60%;
             margin-left: 0;
             margin-right: auto;
-        }
-
-        body > section:nth-child(6) {
-            left: 0;
-            right: 0;
-            top: -7%;
-            margin: auto;
-            width: 100%;
-            height: 700px;
-            position: inherit;
         }
 
         .assignments {
@@ -478,6 +476,27 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
+        .assignments > div {
+            border: 20px solid white;
+        }
+
+        .ass1img {
+            background: url(assests/topcontact.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        body > section:nth-child(6) {
+            left: 0;
+            right: 0;
+            top: -7%;
+            margin: auto;
+            width: 100%;
+            height: 700px;
+            position: inherit;
+        }
+
+
         .project {
             width: 500px;
             height: 500px;
@@ -487,7 +506,11 @@
             grid-template-rows: repeat(4, 1fr);
             grid-template-columns: repeat(2, 1fr);
         }
-
+        .proimg {
+            background: url(assests/topcontact.jpg);
+            background-size: cover;
+            background-position: center;
+        }
         body > section:nth-child(7) {
             left: 0;
             right: 0;
@@ -502,14 +525,83 @@
             height: 200px;
             width: 200px;
             margin-left: 900px;
-            border-radius: 100%;
             position: absolute;
-            left: -60px;
-            top: 126px;
+            left: 117px;
+            top: -76px;
             opacity: 0.5;
             background: url(assests/topcontact.jpg);
             background-size: cover;
             background-position: center;
+        }
+
+        input[type=text], select {
+            width: 100px;
+            padding: 12px 20px;
+            display: inline-block;
+            box-sizing: border-box;
+            position: absolute;
+            top: 80px;
+            left: 496px;
+        }
+
+        input[type=email], select {
+            width: 100px;
+            padding: 12px 20px;
+            display: inline-block;
+            box-sizing: border-box;
+            position: absolute;
+            top: 80px;
+            right: 449px;
+        }
+
+        input[type=subject], select {
+            width: 500px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            box-sizing: border-box;
+            position: absolute;
+            top: 145px;
+            left: 496px;
+        }
+
+        input[type=textarea], select {
+            width: 500px;
+            height: 165px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            box-sizing: border-box;
+            position: absolute;
+            top: 225px;
+            left: 496px;
+        }
+
+        .submit {
+            height: 66px;
+            width: 174px;
+            margin-left: 900px;
+            border-radius: 32%;
+            position: absolute;
+            left: 168px;
+            top: 372px;
+            background: #ff253a;
+        }
+
+        footer {
+            background: black;
+            height: 150px;
+        }
+
+        .fotter1 {
+            top: 67px;
+            bottom: 31px;
+            margin: auto;
+            position: relative;
+        }
+
+        footer > div > h3 {
+            color: green;
         }
     </style>
 </head>
@@ -531,9 +623,11 @@
 
 </header>
 <section class="section1" id="section1">
+
     <article class="animation" id="animation">
         <div class="animation1" id="animation1">
             <aside class="sidetext">
+                <div class="top" id="top"></div>
                 <h2>Hello, my name is</h2>
                 <h1 class="myName">HIRUNI KANDAGE</h1>
                 <h2 class="developer">And I'm a <span>Software Developer</span></h2>
@@ -542,6 +636,7 @@
         </div>
         <div class="animation2" id="animation2">
             <aside class="sidetext">
+                <div class="top" id="top2"></div>
                 <h2>Hello, my name is</h2>
                 <h1 class="myName">HIRUNI KANDAGE</h1>
                 <h2 class="developer">And I'm a <span>Software Developer</span></h2>
@@ -550,6 +645,7 @@
         </div>
         <div class="animation3" id="animation3">
             <aside class="sidetext">
+                <div class="top" id="top3"></div>
                 <h2>Hello, my name is</h2>
                 <h1 class="myName">HIRUNI KANDAGE</h1>
                 <h2 class="developer">And I'm a <span>Software Developer</span></h2>
@@ -558,6 +654,7 @@
         </div>
         <div class="animation4" id="animation4">
             <aside class="sidetext">
+                <div class="top" id="top4"></div>
                 <h2>Hello, my name is</h2>
                 <h1 class="myName">HIRUNI KANDAGE</h1>
                 <h2 class="developer">And I'm a <span>Software Developer</span></h2>
@@ -589,24 +686,53 @@
             distinctio eaque fugit illum incidunt labore laborum nobis nostrum quo, repellendus ut vero vitae.
             Asperiores, non.</p>
     </div>
-    <img src="assests/phone.png" alt="Testing">071 7230150
+
+
+    <div class="contact" id="contactn">
+        <img src="assests/phone.png" alt="Testing">
+        <h1>0716362422</h1></div>
     <img src="assests/gmail.png" alt="Testing">hirunikandage@gmail.com
-    <h2 class="tel" id="tel">0717230150</h2>
-    <h2 class="email" id="email">0717230150</h2>
-    <h2 class="add" id="add">0717230150</h2>
-    <h2 class="linkdln" id="linkdln">0717230150</h2>
+    <img src="assests/location.png" alt="Testing">Hiruni Kandage<br>Minuwandeniya<br>Karagoda<br>Galle.
 </section>
 <section class="section3" id="section3">
     <h3><dfn id="SKILLS">Skills</dfn></h3>
     <article class="skillsbegin" id="skillsbegin">
-        <div>soft skills</div>
-        <div>technical skills</div>
-        <div id="second1"></div>
-        <div id="second2"></div>
-        <div id="second3"></div>
-        <div id="second4"></div>
-        <div id="second5"></div>
-        <div id="second6"></div>
+        <div class="skill">
+            <h4>Java</h4>
+            <div class="progress-bar">
+                <div class="progress" role="progressbar"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h4>HTML</h4>
+            <div class="progress-bar">
+                <div class="progress" role="progressbar"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h4>MySQL</h4>
+            <div class="progress-bar">
+                <div class="progress" role="progressbar"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h4>CSS</h4>
+            <div class="progress-bar">
+                <div class="progress" role="progressbar"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h4>Python</h4>
+            <div class="progress-bar">
+                <div class="progress" role="progressbar"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h4>JS</h4>
+            <div class="progress-bar">
+                <div class="progress" role="progressbar"></div>
+            </div>
+        </div>
     </article>
     <aside class="skillsend" id="skillsend">
         <div></div>
@@ -632,6 +758,7 @@
 </section>
 <section class="section4" id="section4">
     <h3><dfn id="EDUCATION">EDUCATION</dfn></h3>
+    <div class="educationtop" id="educationtop"></div>
     <div class="vl" id="vl"></div>
     <div class="dot1" id="dot1"></div>
     <div class="dot2" id="dot2"></div>
@@ -648,15 +775,16 @@
         <section class="ijse" id="ijse"></section>
         <h4 class="bubble3content" id="bubble3content">Primary Education <br> 2020-2020<br> g/magedra mv</h4>
     </div>
-    <hr>
 </section>
 <section class="section5" id="section5">
     <h3><dfn id="ASSIGNMENT">ASSIGNMENT</dfn></h3>
     <article class="assignments" id="assignments">
+        <div class="ass1img" id="ass1img"></div>
+        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis delectus dolores ea explicabo iste,
+            minus nemo nesciunt odio perferendis possimus qui quod ratione recusandae repellat repudiandae rerum tempora
+            veniam voluptatum!</p></div>
         <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="ass1img" id="ass1img2"></div>
         <div></div>
         <div></div>
         <div></div>
@@ -666,8 +794,10 @@
 <section class="section6" id="section6">
     <h3><dfn id="PROJECTS">PROJECTS</dfn></h3>
     <article class="project" id="project">
-        <div></div>
-        <div></div>
+        <div class="proimg" id="proimg"></div>
+        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis delectus dolores ea explicabo iste,
+            minus nemo nesciunt odio perferendis possimus qui quod ratione recusandae repellat repudiandae rerum tempora
+            veniam voluptatum!</p></div>
         <div></div>
         <div></div>
         <div></div>
@@ -680,16 +810,25 @@
     <h3><dfn id="CONTACT">CONTACT</dfn></h3>
     <img src="assests/sendme.gif" alt="This is a GIF Image" width="300px">
     <h3>hay there happy to here from you</h3>
-    <h3>hay there happy to here from you</h3>
-    <hr>
-    <h3>hay there happy to here from you</h3>
-    <hr>
-    <h3>hay there happy to here from you</h3>
-    <hr>
     <div class="contacttop" id="contacttop"></div>
+    <div class="submit" id="submit"></div>
+    <aside class="text_side">
+        <h1>Message me</h1>
+        <input type="text" name="name"
+               placeholder="Your name..">
+        <input type="email" name="email"
+               placeholder="Email">
+        <input type="subject" name="subject"
+               placeholder="Subject">
+        <input type="textarea" name="message"
+               placeholder="Message..">
+        <div class="button">Send Message</div>
+    </aside>
 </section>
 <footer>
-    <h3>Developed By IJSE</h3>
+    <div class="fotter1" id="fotter1">
+        <h3>Designed & Developed with ♥ by:<br>Hiruni Kandage</h3>
+    </div>
 </footer>
 </body>
 </html>
