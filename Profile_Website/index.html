@@ -3,20 +3,631 @@
 <head>
     <meta charset="UTF-8">
     <title>my profile website</title>
+    <link rel="icon" href="assests/img1.jpg">
+    <meta name="keywords" content="profile website">
+    <meta name="description" content="profile website">
+    <meta name="theme-color" content="red">
+    <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
-<style></style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Ubuntu&family=Vollkorn&display=swap"
+          rel="stylesheet">
+    <link href="assests/fonts/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        header {
+            height: 90px;
+            width: 100%;
+        }
+
+        .headertop {
+            z-index: 900;
+            position: fixed;
+            width: 100%;
+            height: 90px;
+            color: white;
+            cursor: pointer;
+            background: black;
+            box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+        }
+
+        .headertop > img {
+            width: 50px;
+            height: 70px;
+            padding: 10px;
+        }
+
+        .headertop > ul {
+            position: absolute;
+            right: 25px;
+            font-size: 20px;
+            top: 0;
+            list-style: none;
+        }
+
+        .headertop > ul > li {
+            color: white;
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .headertop > ul > li > i {
+            color: white;
+            margin: 10px;
+
+        }
+
+        .headertop > h3 {
+            position: absolute;
+            top: 24px;
+            left: 55px;
+            bottom: 0;
+            margin: auto;
+            right: 1000px;
+            font-size: 36px;
+            color: white;
+        }
+
+        body > section {
+            height: 100vh;
+            position: relative;
+        }
+
+        body > section:nth-child(2) {
+            width: 100%;
+            height: 550px;
+            position: inherit;
+            left: 0;
+            right: 0;
+            top: 50px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .animation {
+            width: 400%;
+            height: 100%;
+            display: flex;
+            animation: slider 10s infinite alternate;
+        }
+
+        .animation1 {
+            top: 500px;
+            height: 100%;
+            width: 100%;
+            background: url("assests/img2.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .animation2 {
+            top: 500px;
+            height: 100%;
+            width: 100%;
+            background: url("assests/img3.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .animation3 {
+            top: 500px;
+            height: 100%;
+            width: 100%;
+            background: url("assests/img4.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .animation4 {
+            top: 500px;
+            height: 100%;
+            width: 100%;
+            background: url("assests/img5.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        @keyframes slider {
+            0%, 20% {
+                transform: translate(-0%);
+            }
+            25%, 45% {
+                transform: translate(-25%);
+            }
+            50%, 70% {
+                transform: translate(-50%);
+            }
+            75%, 100% {
+                transform: translate(-75%);
+            }
+        }
+
+        body > section:nth-child(3) {
+            left: 0;
+            right: 0;
+            top: -7%;
+            margin: auto;
+            width: 100%;
+            height: 700px;
+            position: inherit;
+        }
+
+        .section2 > h3 {
+            margin-left: 50px;
+            margin-top: 0;
+            top: 100px;
+        }
+
+        .profile_img {
+            height: 200px;
+            width: 200px;
+            margin-left: 900px;
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            background: url("assests/img1.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .profile_details {
+            margin-left: 50px;
+            margin-right: 500px;
+        }
+
+        body > section:nth-child(4) {
+            left: 0;
+            right: 0;
+            top: -7%;
+            margin: auto;
+            width: 100%;
+            height: 700px;
+            position: inherit;
+
+        }
+
+        .skillsbegin {
+            width: 95%;
+            height: 500px;
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .skillsend {
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 99%;
+            height: 100px;
+            display: grid;
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-columns: repeat(18, 1fr);
+        }
+
+        .skillsend > div {
+            opacity: 0.3;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            background: url("assests/skillsend.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        body > section:nth-child(5) {
+            left: 0;
+            right: 0;
+            top: -7%;
+            margin: auto;
+            width: 100%;
+            height: 700px;
+            /* position: inherit;*/
+        }
+
+        .vl {
+            border-left: 6px solid green;
+            height: 650px;
+            width: 2px;
+            position: relative;
+            left: 0;
+            right: 0;
+
+            margin: auto;
+            top: 0;
+        }
+
+        .dot1 {
+            background: #ff253a;
+            content: " ";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            border-radius: 100%;
+        }
+
+        .dot2 {
+            background: #ff253a;
+            content: " ";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            left: 0;
+            right: 0;
+            top: 100px;
+            margin: auto;
+            border-radius: 100%;
+        }
+
+        .dot3 {
+            background: #ff253a;
+            content: " ";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            left: 0;
+            right: 0;
+            bottom: 100px;
+            margin: auto;
+            border-radius: 100%;
+        }
+
+        .bubble1 {
+            width: 300px;
+            height: 80px;
+            border: 2px solid black;
+            position: relative;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            left: 207px;
+            right: 0;
+            bottom: 0;
+            top: -133px;
+            margin: auto;
+        }
+
+        .bubble1:before {
+            content: "";
+            position: absolute;
+            right: 100%;
+            top: 26px;
+            width: 0;
+            height: 0;
+            border-top: 13px solid transparent;
+            border-right: 26px solid black;
+            border-bottom: 13px solid transparent;
+        }
+
+        .bubble1content {
+            left: 20px;
+        }
+
+        .primary {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            position: absolute;
+            left: 84px;
+            top: 16px;
+            right: 0;
+            margin: auto;
+            background: url(assests/primary.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .bubble2 {
+            width: 300px;
+            height: 80px;
+            background: red;
+            position: relative;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            left: -211px;
+            right: 0;
+            bottom: 0;
+            top: -474px;
+            margin: auto;
+        }
+
+        .bubble2:before {
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 26px;
+            width: 0;
+            height: 0;
+            border-top: 13px solid transparent;
+            border-left: 26px solid red;
+            border-bottom: 13px solid transparent;
+        }
+
+        .secondary {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            position: absolute;
+            left: 84px;
+            top: 16px;
+            right: 0;
+            margin: auto;
+            background: url(assests/primary.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .bubble3 {
+            width: 300px;
+            height: 80px;
+            border: 2px solid black;
+            position: relative;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            left: 207px;
+            right: 0;
+            bottom: 0;
+            top: -794px;
+            margin: auto;
+        }
+
+        .bubble3:before {
+            content: "";
+            position: absolute;
+            right: 100%;
+            top: 26px;
+            width: 0;
+            height: 0;
+            border-top: 13px solid transparent;
+            border-right: 26px solid black;
+            border-bottom: 13px solid transparent;
+        }
+
+        .ijse {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            position: absolute;
+            left: 84px;
+            top: 16px;
+            right: 0;
+            margin: auto;
+            background: url(assests/primary.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        hr {
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        #second {
+            background: #C4C4C4;
+            border-radius: 20px;
+            height: 8px;
+            width: 20px;
+        }
+
+        body > section:nth-child(6) {
+            left: 0;
+            right: 0;
+            top: -7%;
+            margin: auto;
+            width: 100%;
+            height: 700px;
+            position: inherit;
+        }
+
+        .assignments {
+            width: 95%;
+            height: 500px;
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        body > section:nth-child(7) {
+            left: 0;
+            right: 0;
+            top: -7%;
+            margin: auto;
+            width: 100%;
+            height: 700px;
+            position: inherit;
+        }
+
+        .project {
+            width: 95%;
+            height: 500px;
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    </style>
 </head>
 <body>
-<main>
-    <header></header>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <footer></footer>
-</main>
+<header class="header" id="header">
+    <section class="headertop" id="headertop">
+        <img src="assests/img1.jpg" alt="Testing">
+        <h3>iruni Kandage</h3>
+        <ul>
+            <li><i class="fas fa-address-card"></i><a href="#ABOUT">ABOUT ME</a></li>
+            <li><i class="fas fa-medal"></i><a href="#SKILLS">SKILLS</a></li>
+            <li><i class="fas fa-graduation-cap"></i><a href="#EDUCATION">EDUCATION</a></li>
+            <li><i class="fas fa-book-open"></i><a href="#ASSIGNMENT">ASSIGNMENT</a></li>
+            <li><i class="fas fa-project-diagram"></i><a href="#PROJECTS">PROJECTS</a></li>
+            <li><i class="fas fa-phone-volume"></i><a href="#CONTACT">CONTACT</a></li>
+
+        </ul>
+    </section>
+
+</header>
+<section class="section1" id="section1">
+    <article class="animation" id="animation">
+        <div class="animation1" id="animation1">
+            <aside class="sidetext">
+                <h2>Hello, my name is</h2>
+                <h1 class="myName">HIRUNI KANDAGE</h1>
+                <h2 class="developer">And I'm a <span>Software Developer</span></h2>
+                <div class="button">say hi to me</div>
+            </aside>
+        </div>
+        <div class="animation2" id="animation2">
+            <aside class="sidetext">
+                <h2>Hello, my name is</h2>
+                <h1 class="myName">HIRUNI KANDAGE</h1>
+                <h2 class="developer">And I'm a <span>Software Developer</span></h2>
+                <div class="button">say hi to me</div>
+            </aside>
+        </div>
+        <div class="animation3" id="animation3">
+            <aside class="sidetext">
+                <h2>Hello, my name is</h2>
+                <h1 class="myName">HIRUNI KANDAGE</h1>
+                <h2 class="developer">And I'm a <span>Software Developer</span></h2>
+                <div class="button">say hi to me</div>
+            </aside>
+        </div>
+        <div class="animation4" id="animation4">
+            <aside class="sidetext">
+                <h2>Hello, my name is</h2>
+                <h1 class="myName">HIRUNI KANDAGE</h1>
+                <h2 class="developer">And I'm a <span>Software Developer</span></h2>
+                <div class="button">say hi to me</div>
+            </aside>
+        </div>
+    </article>
+</section>
+<section class="section2" id="section2">
+    <h3><dfn id="ABOUT">ABOUT ME</dfn></h3>
+    <aside class="profile_img" id="profile_img"></aside>
+    <div class="profile_details" id="profile_details">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid atque beatae cumque cupiditate
+            distinctio eaque fugit illum incidunt labore laborum nobis nostrum quo, repellendus ut vero vitae.
+            Asperiores, non.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid atque beatae cumque cupiditate
+            distinctio eaque fugit illum incidunt labore laborum nobis nostrum quo, repellendus ut vero vitae.
+            Asperiores, non.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid atque beatae cumque cupiditate
+            distinctio eaque fugit illum incidunt labore laborum nobis nostrum quo, repellendus ut vero vitae.
+            Asperiores, non.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid atque beatae cumque cupiditate
+            distinctio eaque fugit illum incidunt labore laborum nobis nostrum quo, repellendus ut vero vitae.
+            Asperiores, non.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid atque beatae cumque cupiditate
+            distinctio eaque fugit illum incidunt labore laborum nobis nostrum quo, repellendus ut vero vitae.
+            Asperiores, non.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid atque beatae cumque cupiditate
+            distinctio eaque fugit illum incidunt labore laborum nobis nostrum quo, repellendus ut vero vitae.
+            Asperiores, non.</p>
+    </div>
+    <img src="assests/phone.png" alt="Testing">071 7230150
+    <img src="assests/gmail.png" alt="Testing">hirunikandage@gmail.com
+    <h2 class="tel" id="tel">0717230150</h2>
+    <h2 class="email" id="email">0717230150</h2>
+    <h2 class="add" id="add">0717230150</h2>
+    <h2 class="linkdln" id="linkdln">0717230150</h2>
+</section>
+<section class="section3" id="section3">
+    <h3><dfn id="SKILLS">Skills</dfn></h3>
+    <article class="skillsbegin" id="skillsbegin">
+        <div style="background: red">soft skills</div>
+        <div style="background: green">technical skills</div>
+        <div style="background: orange"></div>
+        <div style="background: deeppink"></div>
+        <div style="background: blue"></div>
+        <div style="background: magenta"></div>
+        <div style="background: yellow"></div>
+        <div style="background: purple"></div>
+    </article>
+    <aside class="skillsend" id="skillsend">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </aside>
+</section>
+<section class="section4" id="section4">
+    <h3><dfn id="EDUCATION">EDUCATION</dfn></h3>
+    <div class="vl" id="vl"></div>
+    <div class="dot1" id="dot1"></div>
+    <div class="dot2" id="dot2"></div>
+    <div class="dot3" id="dot3"></div>
+    <div class="bubble1" id="bubble1">
+        <section class="primary" id="primary"></section>
+        <h4 class="bubble1content" id="bubble1content">Primary Education <br> 2020-2020<br> g/magedra mv</h4>
+    </div>
+    <div class="bubble2" id="bubble2">
+        <section class="secondary" id="secondary"></section>
+        <h4 class="bubble2content" id="bubble2content">Primary Education <br> 2020-2020<br> g/magedra mv</h4>
+    </div>
+    <div class="bubble3" id="bubble3">
+        <section class="ijse" id="ijse"></section>
+        <h4 class="bubble3content" id="bubble3content">Primary Education <br> 2020-2020<br> g/magedra mv</h4>
+    </div>
+    <div id="second"></div>
+    <hr>
+</section>
+<section>
+    <h3><dfn id="ASSIGNMENT">ASSIGNMENT</dfn></h3>
+    <article class="assignments" id="assignments">
+        <div style="background: red">soft skills</div>
+        <div style="background: green">technical skills</div>
+        <div style="background: orange"></div>
+        <div style="background: deeppink"></div>
+        <div style="background: blue"></div>
+        <div style="background: magenta"></div>
+        <div style="background: yellow"></div>
+        <div style="background: purple"></div>
+    </article>
+</section>
+<section>
+    <h3><dfn id="PROJECTS">PROJECTS</dfn></h3>
+    <article class="project" id="project">
+        <div style="background: red">soft skills</div>
+        <div style="background: green">technical skills</div>
+        <div style="background: orange"></div>
+        <div style="background: deeppink"></div>
+        <div style="background: blue"></div>
+        <div style="background: magenta"></div>
+        <div style="background: yellow"></div>
+        <div style="background: purple"></div>
+    </article>
+</section>
+<section>
+    <h3><dfn id="CONTACT">CONTACT</dfn></h3>
+</section>
+<footer>
+    <h3>Developed By IJSE</h3>
+</footer>
 </body>
 </html>
